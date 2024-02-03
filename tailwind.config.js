@@ -12,6 +12,7 @@ module.exports = {
       },
       colors: {
         background: '#2B2B2B',
+        background2: '#3B3B3B',
         text1: '#FFFFFF',
         text2: '#858584',
         buttonBackground: '#A259FF',
@@ -20,6 +21,9 @@ module.exports = {
         sm: '375px',
         md: '834px',
       },
+    },
+    fontFamily: {
+      sans: ['Work Sans'],
     },
   },
   plugins: [],
