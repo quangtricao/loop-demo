@@ -4,12 +4,21 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        heading1: '51px',
-        heading2: '22px',
+        H1: '67px',
+        H2: '51px',
+        H3: '38px',
+        H4: '28px',
+        H5: '22px',
       },
       colors: {
         background: '#2B2B2B',
+        text1: '#FFFFFF',
+        text2: '#858584',
         buttonBackground: '#A259FF',
+      },
+      screens: {
+        sm: '375px',
+        md: '834px',
       },
     },
   },
