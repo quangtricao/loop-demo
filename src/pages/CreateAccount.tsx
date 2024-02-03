@@ -41,16 +41,18 @@ export default function CreateAccount() {
 
   return (
     <div>
-      <div className='flex flex-col md:flex-row justify-between md:gap-[60px]  bg-background '>
+      <div className='flex flex-col md:flex-row justify-between md:gap-[60px] bg-background '>
         <div className='grow basis-0 bg-white'>
           <img src={ImageCover} alt='something here' className='object-cover h-[100%] w-[100%]' />
         </div>
 
         <div className='grow basis-0'>
-          <div className='flex flex-col gap-[40px] text-white pt-[30px] pb-[40px] pr-0 md:pr-[195px] md:py-[100px]'>
-            <p className='text-H2'>Create Account</p>
-            <p className='text-H5'>Welcome! Enter Your Details And Join The Loop Revolution</p>
-            <div className='flex flex-col gap-[30px] w-[330px]'>
+          <div className='flex flex-col gap-[40px] text-white w-fit pt-[30px] pb-[40px] xl:py-[100px]'>
+            <p className='text-H2 w-[90%] mx-[auto] md:mx-0'>Create Account</p>
+            <p className='text-H5 w-[90%] mx-[auto] md:mx-0'>
+              Welcome! Enter Your Details And Join The Loop Revolution
+            </p>
+            <div className='flex flex-col gap-[30px] w-[90%] mx-[auto] md:mx-0 xl:w-[60%]'>
               {/* Username input */}
               <div className='relative block '>
                 <span className='absolute inset-y-0 left-0 flex items-center pl-[20px]'>
