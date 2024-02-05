@@ -6,7 +6,7 @@ export default function Artist() {
   return (
     <div>
       <div className='text-H1 hidden'>Artist Info</div>
-      <div className='before:bg-red-500 h-[370px]'>
+      <div className='before:bg-red-500 h-[300px] sm:h-[370px]'>
         <img src={ArtistCover} alt='artist cover' className='w-[100%] h-[100%] object-cover ' />
       </div>
       <ArtistInfo />

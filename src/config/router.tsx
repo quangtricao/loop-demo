@@ -19,7 +19,15 @@ const router = createBrowserRouter([
         element: <CreateAccount />,
       },
       {
-        path: '/artist',
+        path: '/artist/artist-name/created',
+        element: <Artist />,
+      },
+      {
+        path: '/artist/artist-name/owned',
+        element: <Artist />,
+      },
+      {
+        path: '/artist/artist-name/collection',
         element: <Artist />,
       },
     ],

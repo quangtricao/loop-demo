@@ -9,7 +9,7 @@ const ArtistData = {
   stats: [{ Volume: '250k+' }, { 'NFTs Sold': '50+' }, { Followers: '3000+' }],
 
   bio: 'American Singer-Songwriter',
-  NftWallet: 'asdrewasdqweqweasdreasdasdas',
+  NftWallet: 'asdrewasdqweqweasdreasdasdasasdasdasdasda123',
   socialLinks: [
     {
       platform: 'website',
@@ -27,19 +27,19 @@ export default function ArtistInfo() {
   return (
     <div className='bg-background text-white'>
       <div className='max-w-[80%] mx-auto flex flex-col py-[40px] gap-[20px]'>
-        {/* Left */}
+        {/* First row */}
         <div className='flex flex-col md:flex-row md:justify-between'>
-          <div className='text-H2'>{ArtistData.name}</div>
-          {/* Right */}
-          <div className='flex gap-5 leading-[60px] h-fit'>
-            <div className='bg-buttonBackground px-[30px] rounded-[20px]'>
-              {ArtistData.NftWallet}
+          <p className='text-H2'>{ArtistData.name}</p>
+          <div className='flex flex-col md:flex-row gap-5 leading-[60px] h-fit'>
+            <div className='bg-buttonBackground px-[30px] rounded-[20px] text-center'>
+              {ArtistData.NftWallet.slice(0, 10)}...{ArtistData.NftWallet.slice(-3)}
             </div>
-            <div className='border-2 border-solid px-[30px] rounded-[20px] border-buttonBackground'>
+            <button className='border-2 border-solid px-[30px] rounded-[20px] border-buttonBackground '>
               Follow
-            </div>
+            </button>
           </div>
         </div>
+
         <div className='flex gap-6'>
           {ArtistData.stats.map((stat) => (
             <div key={Object.keys(stat)[0]}>

@@ -17,10 +17,6 @@ module.exports = {
         text2: '#858584',
         buttonBackground: '#A259FF',
       },
-      screens: {
-        sm: '375px',
-        md: '834px',
-      },
     },
     fontFamily: {
       sans: ['Work Sans'],

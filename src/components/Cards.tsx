@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom';
 import CardPreview from './CardPreview';
 
 type Card = {
@@ -52,7 +53,19 @@ const sectionList = [
   { name: 'Collection', number: 4 },
 ];
 
+const selectedStyle = {
+  color: 'white',
+  borderBottom: '1px solid',
+  borderColor: '#858584',
+};
+
+const notSelectedStyle = {
+  color: '#858584',
+};
+
 export default function Cards() {
+  const id = useLocation().pathname;
+
   return (
     <div>
       <div className='bg-background'>
@@ -61,10 +74,15 @@ export default function Cards() {
             {sectionList.map((section) => (
               <div
                 key={section.name}
-                className='grow flex justify-center gap-5 py-[10px] border-solid border-b-2 border-text2'
+                style={id.includes(section.name.toLowerCase()) ? selectedStyle : notSelectedStyle}
+                className='grow flex justify-center gap-5 py-[10px] '
               >
-                <div className='text-text2 font-bold'>{section.name}</div>
-                <div className='bg-text2 px-3 rounded-[20px]'>{section.number}</div>
+                <Link to={`/artist/artist-name/${section.name.toLocaleLowerCase()}`}>
+                  <div>{section.name}</div>
+                </Link>
+                <div className='hidden sm:block bg-text2 px-3 rounded-[20px] text-white'>
+                  {section.number}
+                </div>
               </div>
             ))}
           </div>
@@ -73,7 +91,7 @@ export default function Cards() {
 
       <div className='bg-background2 text-white'>
         <div className='max-w-[80%] mx-auto py-[80px]'>
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6'>
             {data.map((card) => (
               <CardPreview key={card.song} card={card} />
             ))}
