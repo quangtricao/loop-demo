@@ -1,7 +1,7 @@
-import DiscordLogo from '../asset/icons/DiscordLogo.png';
-import InstagramLogo from '../asset/icons/InstagramLogo.png';
-import TwitterLogo from '../asset/icons/TwitterLogo.png';
-import YoutubeLogo from '../asset/icons/YoutubeLogo.png';
+import DiscordLogo from 'src/asset/icons/DiscordLogo.png';
+import InstagramLogo from 'src/asset/icons/InstagramLogo.png';
+import TwitterLogo from 'src/asset/icons/TwitterLogo.png';
+import YoutubeLogo from 'src/asset/icons/YoutubeLogo.png';
 
 export default function Footer() {
   return (
