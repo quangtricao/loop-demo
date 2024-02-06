@@ -91,7 +91,7 @@ export default function Cards() {
 
       <div className='bg-background2 text-white'>
         <div className='max-w-[80%] mx-auto py-[80px]'>
-          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6'>
+          <div className='grid grid-cols-2 xl:grid-cols-3 gap-6'>
             {data.map((card) => (
               <CardPreview key={card.song} card={card} />
             ))}

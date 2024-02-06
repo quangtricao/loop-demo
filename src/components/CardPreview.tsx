@@ -19,16 +19,16 @@ export default function CardPreview({ card }: CardPreviewProp) {
         <div className='flex flex-col px-[30px] pt-[20px] pb-[25px]'>
           <div className='text-H5'>{card.song}</div>
           <div className='flex gap-[10px]'>
-            <img src={Img} alt='2' className='w-[24px] rounded-[12px]' />
+            <img src={Img} alt='2' className='hidden sm:block w-[24px] rounded-[12px]' />
             <div>{card.artist}</div>
           </div>
 
-          <div className='pt-[25px] flex justify-between'>
+          <div className='pt-[25px] flex flex-col gap-2 sm:gap-0 sm:flex-row justify-between'>
             <div>
               <div className='text-[12px]'>Price</div>
               <div>{card.price} ETH</div>
             </div>
-            <div className='text-right'>
+            <div className='sm:text-right'>
               <div className=' text-[12px]'>Highest bid</div>
               <div>{card.highestBid} wETH</div>
             </div>
