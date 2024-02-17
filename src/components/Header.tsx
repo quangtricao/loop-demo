@@ -10,6 +10,7 @@ export default function Header() {
     { title: 'Marketplace', path: '/' },
     { title: 'Rankings', path: '/' },
     { title: 'Connect a wallet', path: '/' },
+    { title: 'User Dashboard', path: '/user-dashboard/user-id' },
   ];
 
   return (
