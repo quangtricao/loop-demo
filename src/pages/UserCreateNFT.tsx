@@ -4,22 +4,25 @@ import { useNavigate } from 'react-router-dom';
 export default function UserCreateNFT() {
   const navigate = useNavigate();
   const [images, setImages] = useState<string[]>([]);
-  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [imageFile, setImageFile] = useState<File[]>([]);
 
   const previewImage = (event: ChangeEvent<HTMLInputElement>) => {
     const imageFiles = event.target.files; // Get the selected files.
     if (!imageFiles) {
       return;
     }
-    const imageFilesLength = imageFiles.length;
 
-    // If at least one image is selected, then proceed to display the preview.
-    if (imageFilesLength > 0) {
-      const imageSrc = URL.createObjectURL(imageFiles[0]); // Get the image path.
-      setImages([...images, imageSrc]);
-      setImageFile(imageFiles[0]);
-      console.log(imageFile);
+    const imageSrcArr: string[] = [];
+    const imageFilesArr: File[] = [];
+
+    for (let i = 0; i < imageFiles.length; i++) {
+      const imageSrc = URL.createObjectURL(imageFiles[i]); // Get the image path.
+      imageSrcArr.push(imageSrc);
+      imageFilesArr.push(imageFiles[i]);
     }
+
+    setImages([...images, ...imageSrcArr]);
+    setImageFile([...imageFile, ...imageFilesArr]);
   };
 
   const handleRemoveImage = (fileName: string) => {
@@ -80,7 +83,7 @@ export default function UserCreateNFT() {
             type='file'
             id='file-upload'
             accept='image/*'
-            value=''
+            multiple
             onChange={(event) => previewImage(event)}
           />
           <button></button>
